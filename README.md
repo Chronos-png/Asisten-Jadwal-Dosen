@@ -1,9 +1,18 @@
 ## Run Server : <br />
+Pindah ke folder server-side terlebih dahulu atau langsung dapat mengetikkan code berikut pada terminal vscode 
 ```
-node server.js
+cd server-side
 ```
-
-## Main Page at : <br />
+Install Dependecies yang sudah tersedia di package.json dengan menjalankan code berikut :<br />
+```
+cd server-side
+```
+Kemudian Nyalakan Server menggunakan code berikut :<br />
+```
+npm start
+```
+## Melihat Halaman Client : <br />
+Saat Ini Halaman masih Statis, sehingga anda perlu melihat halamanya secara langsung pada index.php yang berlokasi pada :<br />
 > "/public/index.html"
 
 ## Description <br />
