@@ -5,7 +5,7 @@ const WebSocket = require("ws"); // Node.js WebSocket library
 const path = require("path");
 const { queryDatabase } = require("./database");
 const app = express();
-const port = 8000;
+const port = 5000;
 const server = new JSONRPCServer(); // JSON-RPC Server Setup
 
 app.use(cors());

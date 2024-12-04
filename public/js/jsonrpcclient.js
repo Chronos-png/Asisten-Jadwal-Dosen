@@ -10,7 +10,7 @@ function getEndTime(start, sks) {
 }
 
 async function sendRPCRequest(method, params) {
-  const response = await fetch("http://localhost:8000/rpc", {
+  const response = await fetch("http://localhost:5000/rpc", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -73,18 +73,20 @@ async function getJadwal() {
             <button class="delete-btn text-red-600 hover:text-red-800">
               Hapus
             </button>
-            <button class="delete-btn text-red-600 hover:text-red-800">
-            Hapus
+            <button class="edit-btn text-red-600 hover:text-red-800">
+            Edit
           </button>
           `;
 
           const deleteButton = jadwalDiv.querySelector(".delete-btn");
-          deleteButton.addEventListener("click", () =>
-            deleteJadwal(jadwalItem.KODE_JADWAL, jadwalDiv)
-          );
+          if (deleteButton) {
+            deleteButton.addEventListener("click", () =>
+              deleteJadwal(jadwalItem.KODE_JADWAL, jadwalDiv)
+            );
+          }
 
-          const editButton = jadwalDiv.querySelector(".edit-btn");
-          editButton.addEventListener("click", () => openEditForm(jadwalItem));
+          // const editButton = jadwalDiv.querySelector(".edit-btn");
+          // editButton.addEventListener("click", () => openEditForm(jadwalItem));
           jadwalContainer.appendChild(jadwalDiv);
         }
       });
