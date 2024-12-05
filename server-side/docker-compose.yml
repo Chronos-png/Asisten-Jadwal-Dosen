@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    networks:
+      - app-network
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    ports:
+      - "8080:80"
+    volumes:
+      - ./asisten_jadwal_dosen:/var/www/html/asisten_jadwal_dosen_server_side
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
