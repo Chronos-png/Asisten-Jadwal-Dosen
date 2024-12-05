@@ -10,7 +10,7 @@ function getEndTime(start, sks) {
 }
 
 async function sendRPCRequest(method, params) {
-  const response = await fetch("http://localhost:5000/rpc", {
+  const response = await fetch("http://127.0.0.1:5000/rpc", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -37,7 +37,7 @@ async function deleteJadwal(kodeJadwal, jadwalDiv) {
     } else {
       alert("Gagal menghapus jadwal.");
     }
-    getJadwal();
+    // getJadwal();
   } catch (error) {
     console.error("Gagal menghapus jadwal:", error);
     alert("Terjadi kesalahan saat menghapus jadwal.");
@@ -137,7 +137,7 @@ async function addJadwal() {
   });
   if (result.success) {
     alert("Jadwal berhasil ditambahkan!");
-    getJadwal();
+    // getJadwal();
   } else {
     alert("Gagal menambahkan jadwal.");
   }
@@ -154,6 +154,19 @@ function getMataKuliahSks(mataKuliahNama) {
   }
 }
 
+function getData() {
+  selectedJadwal = jadwalItem; // Store the selected schedule
+
+  // Populate the form with the current values
+  document.getElementById("edit-dosen").value = jadwalItem.NAMA_DOSEN;
+  document.getElementById("edit-mataKuliah").value = jadwalItem.KODE_MATKUL;
+  document.getElementById("edit-ruangan").value = jadwalItem.KODE_RUANGAN;
+  document.getElementById("edit-hari").value = jadwalItem.HARI;
+  document.getElementById("edit-waktu").value = jadwalItem.WAKTU_MULAI;
+
+  // Show the form (Make it visible)
+  document.getElementById("edit-form").style.display = "block";
+}
 window.onload = function () {
   getMataKuliah();
   getRuangan();

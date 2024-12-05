@@ -16,25 +16,25 @@
                 </button>
             </div>
             <!-- Modal body -->
-            <div class="p-4 md:p-5">
+            <form class="p-4 md:p-5">
                 <div class="grid gap-4 mb-4 grid-cols-2">
                     <div class="col-span-2">
-                        <label for="dosen" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
-                        <input disabled value="Ahmad Ar-rosyid Hidayatullah" type="text" name="dosen" id="dosen" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">
+                        <label for="dosen-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
+                        <input disabled value="Ahmad Ar-rosyid Hidayatullah" type="text" name="dosen" id="dosen-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">
                     </div>
                     <div class="col-span-2">
-                        <label for="mataKuliah" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Matakuliah</label>
-                        <select id="mataKuliah" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <label for="mataKuliah-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Matakuliah</label>
+                        <select id="mataKuliah-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         </select>
                     </div>
                     <div class="col-span-2">
-                        <label for="ruangan" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Ruangan</label>
-                        <select id="ruangan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <label for="ruangan-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Ruangan</label>
+                        <select id="ruangan-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         </select>
                     </div>
                     <div class="col-span-2">
-                        <label for="hari" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Hari :</label>
-                        <select id="hari" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <label for="hari-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Hari :</label>
+                        <select id="hari-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                             <option value="Senin">Senin</option>
                             <option value="Selasa">Selasa</option>
                             <option value="Rabu">Rabu</option>
@@ -44,8 +44,8 @@
                         </select>
                     </div>
                     <div class="col-span-2">
-                        <label for="waktu" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Waktu Mulai :</label>
-                        <select id="waktu" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <label for="waktu-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Waktu Mulai :</label>
+                        <select id="waktu-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                             <option value="07:00">07:00</option>
                             <option value="09:30">09:30</option>
                             <option value="13:00">13:00</option>
@@ -53,13 +53,13 @@
                         </select>
                     </div>
                 </div>
-                <button type="button" id="addJadwalBtn" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <button type="submit" id="addJadwalBtn" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
                     </svg>
                     Add new product
                 </button>
-            </div>
+            </form>
         </div>
     </div>
 </div>
